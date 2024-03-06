@@ -1,8 +1,9 @@
+import BackButton from './BackButton';
 import ButtonUpload from './ButtonUpload';
 import React, { useState } from 'react';
 
 function UploadDocument() {
-   const [fileUploaded, setFileUploaded] = useState(false);
+    const [fileUploaded, setFileUploaded] = useState(false);
     const [selectedFile, setSelectedFile] = useState(null);
     const [uploadMessage, setUploadMessage] = useState('');
 
@@ -28,7 +29,7 @@ function UploadDocument() {
         <ButtonUpload handleFileChange={handleFileChange}/>
         {fileUploaded && <p>{uploadMessage}</p>}
         {selectedFile ? <p>Archivo seleccionado: {selectedFile.name}</p> : <p>Ningún archivo seleccionado</p>}
-       
+        <BackButton/>
       </form>
       
     </>
