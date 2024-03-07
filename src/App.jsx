@@ -1,4 +1,3 @@
-
 import './App.css'
 import Home from './views/Home';
 import UploadDocument from './views/UploadDocument'
@@ -21,6 +20,7 @@ const theme = createTheme({
 function App() {
 
   return (
+
     <ThemeProvider theme={theme}>
       <CssBaseline /> {/* Reinicia los estilos del navegador */}
       {/* Tu contenido de la aplicación aquí */
@@ -34,6 +34,7 @@ function App() {
           </Routes>
         </BrowserRouter>}
     </ThemeProvider>
+
 
 
   )

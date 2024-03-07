@@ -1,4 +1,6 @@
 //Imports
+import ButtonsPreview from "./ButtonsPreview";
+
 
 function Preview(){
  //Variables de Estado
@@ -9,10 +11,10 @@ function Preview(){
    return(
       <>
         <h1>Este es vista previa</h1>
+        <ButtonsPreview></ButtonsPreview>
       </>
    )
 
 };
 
 export default Preview;
-
