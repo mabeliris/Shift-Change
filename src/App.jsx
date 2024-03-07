@@ -1,4 +1,3 @@
-
 import './App.css'
 import Home from './views/Home'; 
 import UploadDocument from './views/UploadDocument'
@@ -12,7 +11,7 @@ function App() {
    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}>          
-          <Route path="UploadDocument" element={<UploadDocument />} />
+          <Route path="UploadDocument" element={<UploadDocument />}/>
           <Route path="Preview" element={<Preview />} />
           <Route path="Monitor" element={<MonitorView />} />
         </Route>
