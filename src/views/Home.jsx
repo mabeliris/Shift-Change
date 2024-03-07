@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-
     <>
       <div className="title-container">
         <h1 className='titulo'>Cambio de Turnos</h1>
@@ -18,4 +17,5 @@ function Home() {
     </>
   );
 };
+
 export default Home;
