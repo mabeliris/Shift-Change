@@ -27,11 +27,8 @@ function UploadDocument() {
   function getColumns(data) {
     const lineas = data.split('\n');
 
-    const operadores = [];
-    const buses = [];
-    const ubicaciones = [];
-    let seccionDatos = false;
-
+    const datosLineal = []
+    let seccionDatos=false;
     lineas.forEach(linea => {
       if (linea.includes('Oper Alineado')) {
         seccionDatos = true;
@@ -39,20 +36,24 @@ function UploadDocument() {
       }
 
       if (seccionDatos && linea.trim() !== '') {
-        const columnas = linea.split(/[\s_:.]{2,}/); // Split por dos o más espacios en blanco
-        const operador = columnas[0];
-        const ubicacion = columnas[7];
-        const bus = columnas[7];
-
-        operadores.push(operador);
-        ubicaciones.push(ubicacion);
-        buses.push(bus);
+        console.log(linea);
+        const resultadoLinea = {
+          operador:'',
+          ubicacion:'',
+          bus : '',
+        }
+        resultadoLinea.operador= linea.slice(9,27)
+        resultadoLinea.ubicacion=linea.slice(98,114)
+        resultadoLinea.bus=linea.slice(114,124)
+        datosLineal.push(resultadoLinea)
+        // agregar un trim para eliminar espacios
+        // depurar el objeto 
+        // mostrar información
       }
-    });
 
-    console.log("Operadores:", operadores);
-    console.log("Ubicaciones:", ubicaciones);
-    console.log("Buses:", buses);
+    });
+console.log(datosLineal)
+    
   }
 
   useEffect(() => {
@@ -86,3 +87,5 @@ function UploadDocument() {
 }
 
 export default UploadDocument;
+
+//LDW0911 OPER1              20083231   NINGUNA               NINGUNA    Demora     SIN OPERADOR   SLM3175N        BUS01     COMEDOR CM2  
