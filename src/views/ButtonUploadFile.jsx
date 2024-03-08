@@ -16,7 +16,7 @@ const VisuallyHiddenInput = styled('input')({
   width: 1,
 });
 
-function ButtonUpload({ handleFileChange }) {
+function ButtonUploadFile({ handleFileChange }) {
   return (
     <Button
       component="label"
@@ -30,7 +30,7 @@ function ButtonUpload({ handleFileChange }) {
     </Button>
   );
 }
-export default ButtonUpload;
+export default ButtonUploadFile;
 
 
     

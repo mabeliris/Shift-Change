@@ -41,7 +41,6 @@ const StyledImage = styled.img`
 
 function Home() {
   return (
-
     <>
       <TitleContainer>
         <h1 className='titulo'>Cambio de Turnos</h1>
@@ -65,4 +64,5 @@ function Home() {
     </>
   );
 };
+
 export default Home;
