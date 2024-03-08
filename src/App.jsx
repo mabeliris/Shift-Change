@@ -26,16 +26,15 @@ function App() {
       {/* Tu contenido de la aplicación aquí */
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="UploadDocument" element={<UploadDocument />} />
-            <Route path="Preview" element={<Preview />} />
-            <Route path="Monitor" element={<MonitorView />} />
-
+            <Route path="/" element={<Home />}/>
+              <Route path="UploadDocument" element={<UploadDocument />} />
+              <Route path="Preview" element={<Preview />} />
+              <Route path="Monitor" element={<MonitorView />} />
+            
           </Routes>
-        </BrowserRouter>}
+        </BrowserRouter>
+      }
     </ThemeProvider>
-
-
   )
 
 };

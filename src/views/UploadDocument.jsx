@@ -10,6 +10,12 @@ function UploadDocument() {
   function handleFileChange(event) {
     const file = event.target.files[0];
     setSelectedFile(file);
+
+    const reader = new FileReader();
+        reader.onload = function(event) {
+            setFileContent(event.target.result);
+        };
+        reader.readAsText(file);
   }  
   
   function handleSubmit(event) {
@@ -29,6 +35,7 @@ function UploadDocument() {
         <ButtonUpload handleFileChange={handleFileChange}/>
         {fileUploaded && <p>{uploadMessage}</p>}
         {selectedFile ? <p>Archivo seleccionado: {selectedFile.name}</p> : <p>Ningún archivo seleccionado</p>}
+        
         <BackButton/>
       </form>
       
