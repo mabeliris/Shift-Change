@@ -19,15 +19,39 @@ function UploadDocument() {
   function printFile(file) {
   const reader = new FileReader();
   reader.onload = (evt) => {
-    console.log(evt.target.result);
+    //console.log(evt.target.result);
     const data= evt.target.result;
+    getColumns(data)
   };
   reader.readAsText(file);
 }
 
 //crear funcion que reciba el texto
 //obtener la informacion del texto  (array u obj)
+// tenemos 3 objetos según la Mabe operador, ubicación y bus
+// Las claves de 
+function getColumns (data){
+  const lineas = data.split('\n');
 
+  // Inicializamos los arreglos para almacenar las columnas y los arreglos están vacíos
+
+  const operadores = [];
+  const buses = [];
+  const ubicaciones = [];
+  let seccionDatos = false;
+  // Recorremos cada línea y extraemos las tres columnas
+  lineas.forEach(linea => {
+    console.log(linea)
+    // identificar los 3 datos más que pensar en separar columnas
+    // Verificamos si hemos llegado a la sección de datos
+/*if (linea.includes('Camiones:') || linea.includes
+('Auxiliar:')) {
+seccionDatos = true;
+return; // Pasamos a la siguiente línea sin pro
+cesarla*/
+} 
+)  
+}
 
   useEffect(() => {
    console.log("ARCHIVO", selectedFile)
