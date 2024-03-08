@@ -25,7 +25,7 @@ function UploadDocument() {
   };
   reader.readAsText(file);
 }
-
+// VOY A INTENTAR DENUEVO
 //crear funcion que reciba el texto
 //obtener la informacion del texto  (array u obj)
 // tenemos 3 objetos según la Mabe operador, ubicación y bus
