@@ -7,6 +7,7 @@ import MonitorView from './views/MonitorView';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import {useState} from 'react';
 
 // Define el tema personalizado con el fondo deseado
 const theme = createTheme({
@@ -19,6 +20,10 @@ const theme = createTheme({
 
 function App() {
 
+  const [data, setData] = useState (null);
+
+
+
   return (
     
 
@@ -27,10 +32,10 @@ function App() {
       {/* Tu contenido de la aplicación aquí */
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />}/>
-              <Route path="UploadDocument" element={<UploadDocument />} />
-              <Route path="Preview" element={<Preview />} />
-              <Route path="Monitor" element={<MonitorView />} />
+              <Route path="/" element={<Home />}/>
+              <Route path="UploadDocument" element={<UploadDocument setData= {setData}/>} />
+              <Route path="/Preview" element={<Preview data={data} />} />
+              <Route path="/Monitor" element={<MonitorView data={data} />} />
             
           </Routes>
         </BrowserRouter>

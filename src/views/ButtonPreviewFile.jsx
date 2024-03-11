@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
  function ButtonPreviewFile() {
   return (
     <Stack spacing={2} direction="row">      
-      <Button variant="contained">Contained</Button>      
+      <Button variant="contained">Previsualizar</Button>      
     </Stack>
   );
 }

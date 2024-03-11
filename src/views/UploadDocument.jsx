@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import ButtonUploadFile from './ButtonUploadFile';
 import ButtonPreviewFile from './ButtonPreviewFile';
 import ReadFile from './ReadFile';
+import { Link } from 'react-router-dom';
 
-function UploadDocument() {
+function UploadDocument({setData}) {
   const [fileUploaded, setFileUploaded] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadMessage, setUploadMessage] = useState('');
@@ -54,7 +55,9 @@ function UploadDocument() {
       }     
       //        
     });
-console.log(datosLineal)
+   console.log(datosLineal)
+   setData(datosLineal)
+
     
   }
 
@@ -82,7 +85,10 @@ console.log(datosLineal)
         {fileUploaded && <p>{uploadMessage}</p>}
         {selectedFile ? <p>Archivo seleccionado: {selectedFile.name}</p> : <p>Ningún archivo seleccionado</p>}
         <BackButton />
-        <ButtonPreviewFile />
+        <Link to="/Preview">
+         <ButtonPreviewFile />
+        </Link>
+        
       </form>
     </>
   );
