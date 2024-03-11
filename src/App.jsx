@@ -1,7 +1,7 @@
 import './App.css'
 import Home from './views/Home';
-import UploadDocument from './views/UploadDocument'
-import Preview from './views/Preview'
+import UploadDocument from './views/UploadDocument';
+import Preview from './views/Preview';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MonitorView from './views/MonitorView';
 
@@ -20,6 +20,7 @@ const theme = createTheme({
 function App() {
 
   return (
+    
 
     <ThemeProvider theme={theme}>
       <CssBaseline /> {/* Reinicia los estilos del navegador */}

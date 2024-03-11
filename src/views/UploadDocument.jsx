@@ -38,10 +38,12 @@ function UploadDocument() {
       if (seccionDatos && linea.trim() !== '') {
         console.log(linea);
         const resultadoLinea = {
+        //  turno : '', 
           operador:'',
           ubicacion:'',
           bus : '',
         }
+        //resultadoLinea.turno=linea.slice(18,20)  
         resultadoLinea.operador= linea.slice(9,27)
         resultadoLinea.ubicacion=linea.slice(98,114)
         resultadoLinea.bus=linea.slice(114,124)
@@ -49,8 +51,8 @@ function UploadDocument() {
         // agregar un trim para eliminar espacios
         // depurar el objeto 
         // mostrar información
-      }
-
+      }     
+      //        
     });
 console.log(datosLineal)
     
