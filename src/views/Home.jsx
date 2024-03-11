@@ -47,7 +47,7 @@ function Home() {
     }, 1000); // Actualizar la fecha cada segundo
 
     return () => clearInterval(intervalId); // Limpiar el intervalo cuando el componente se desmonta
-  }, []); // Dependencia vacía para que el useEffect solo se ejecute una vez
+  }, []); // Dependencia vacía para que el useEffect solo se ejecute una vez*/
 
   return (
     <>
@@ -85,7 +85,7 @@ function Home() {
           
         </Stack>
       </Container>
-      <p style={{ fontSize: '24px', color: '#c2c2c2',  position: 'fixed', top:'570px', bottom: 10, left: 950, textAlign: 'rigth' }}>Fecha: {currentDate.toLocaleDateString()} Hora: {currentDate.toLocaleTimeString()}</p>
+     
     </>
   );
 };
