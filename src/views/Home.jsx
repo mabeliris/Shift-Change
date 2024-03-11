@@ -72,7 +72,6 @@ function Home() {
     </Stack>
   </StyledContainer>
   <ImageContainer style={{ marginLeft: '20px' }}>
-    {/* Aquí puedes poner tu imagen */}
     <StyledImage src="src/assets/Bhp_logo_PNG1-1.png" alt="Descripción de la imagen" style={{ direction: 'column', marginBottom: '50px' }} />
   </ImageContainer>
 </div>
