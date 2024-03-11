@@ -7,13 +7,47 @@ import { styled } from '@mui/material/styles';
 
 const OrangeButton= styled(Button)({
    backgroundColor: '#ed6c04',
+   fontFamily:'Roboto',
+     '&:hover': {
+    backgroundColor: '#5b5b5b',
+    borderColor: '#0062cc',
+    boxShadow: 'none',
+  },
+  '&:active': {
+    boxShadow: 'none',
+    backgroundColor: '#0062cc',
+    borderColor: '#005cbf',
+  },
+  '&:focus': {
+    boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+  },
 })
+
+const DeleteButton= styled(Button)({
+   
+   borderColor: '#ed6c04',
+   fontFamily:'Roboto',
+     '&:hover': {
+    backgroundColor: '#5b5b5b',
+    borderColor: '#0062cc',
+    boxShadow: 'none',
+  },
+  '&:active': {
+    boxShadow: 'none',
+    backgroundColor: '#d9d9d9',
+    borderColor: '#005cbf',
+  },
+  '&:focus': {
+    boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+  },
+})
+
 function ButtonsPreview() {
   return (
     <Stack direction="row" spacing={2}>
-      <Button variant="outlined" startIcon={<DeleteIcon />}>
+      <DeleteButton variant="outlined" startIcon={<DeleteIcon />}>
         Eliminar
-      </Button>
+      </DeleteButton>
       <OrangeButton variant="contained" endIcon={<SendIcon />}>
         Enviar
       </OrangeButton>
