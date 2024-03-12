@@ -5,7 +5,7 @@ import ButtonPreviewFile from './ButtonPreviewFile';
 import ReadFile from './ReadFile';
 import { Link } from 'react-router-dom';
 
-function UploadDocument({setData}) {
+function UploadDocument({ setData }) {
   const [fileUploaded, setFileUploaded] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadMessage, setUploadMessage] = useState('');
@@ -29,7 +29,7 @@ function UploadDocument({setData}) {
     const lineas = data.split('\n');
 
     const datosLineal = []
-    let seccionDatos=false;
+    let seccionDatos = false;
     lineas.forEach(linea => {
       if (linea.includes('Oper Alineado')) {
         seccionDatos = true;
@@ -39,26 +39,26 @@ function UploadDocument({setData}) {
       if (seccionDatos && linea.trim() !== '') {
         console.log(linea);
         const resultadoLinea = {
-        //  turno : '', 
-          operador:'',
-          ubicacion:'',
-          bus : '',
+          //  turno : '', 
+          operador: '',
+          ubicacion: '',
+          bus: '',
         }
         //resultadoLinea.turno=linea.slice(18,20)  
-        resultadoLinea.operador= linea.slice(9,27)
-        resultadoLinea.ubicacion=linea.slice(98,114)
-        resultadoLinea.bus=linea.slice(114,124)
+        resultadoLinea.operador = linea.slice(9, 27)
+        resultadoLinea.ubicacion = linea.slice(98, 114)
+        resultadoLinea.bus = linea.slice(114, 124)
         datosLineal.push(resultadoLinea)
         // agregar un trim para eliminar espacios
         // depurar el objeto 
         // mostrar información
-      }     
+      }
       //        
     });
-   console.log(datosLineal)
-   setData(datosLineal)
+    console.log(datosLineal)
+    setData(datosLineal)
 
-    
+
   }
 
   useEffect(() => {
@@ -83,12 +83,15 @@ function UploadDocument({setData}) {
         <ButtonUploadFile handleFileChange={handleFileChange} />
         <ReadFile setSelectedFile={setSelectedFile} handleFileChange={handleFileChange} />
         {fileUploaded && <p>{uploadMessage}</p>}
-        {selectedFile ? <p>Archivo seleccionado: {selectedFile.name}</p> : <p>Ningún archivo seleccionado</p>}
-        <BackButton />
-        <Link to="/Preview">
-         <ButtonPreviewFile />
+        {selectedFile ? <p tyle={{color: '#d9d9d9'}}>Archivo seleccionado: {selectedFile.name}</p> : <p style={{color: '#d9d9d9'}}>Ningún archivo seleccionado</p>}
+        <Link to="/" >
+          <BackButton />
         </Link>
-        
+        <Link to="/Preview">
+          <ButtonPreviewFile />
+        </Link>
+
+
       </form>
     </>
   );
