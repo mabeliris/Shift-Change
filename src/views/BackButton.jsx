@@ -12,8 +12,8 @@ function BackButton(){
   };
 
   return (
-    <IconButton aria-label="back" onClick={handleGoBack}>
-      <ArrowBackIcon />
+    <IconButton aria-label="back" onClick={handleGoBack} style={{ color: '#ed6c04', display: 'flex', alignItems: 'start'  }}>
+      <ArrowBackIcon style={{ fontSize: '40px'}} />
     </IconButton>
   );
 };

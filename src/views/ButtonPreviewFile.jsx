@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 
 const Button3 = styled(Button)({
   backgroundColor: '#ed6c04',
+  justifyContent:'flex-end',
   '&:hover': {
     backgroundColor: '#5b5b5b',
     borderColor: '#0062cc',
@@ -19,7 +20,7 @@ const Button3 = styled(Button)({
 
 function ButtonPreviewFile() {
   return (
-    <Stack spacing={2} direction="row">
+    <Stack spacing={2} direction="row" sx={{ justifyContent: 'flex-end'}}>
       <Button3 variant="contained">Previsualizar</Button3>
     </Stack>
   );

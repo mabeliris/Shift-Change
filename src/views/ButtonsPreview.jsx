@@ -51,9 +51,11 @@ function ButtonsPreview() {
         Eliminar
       </DeleteButton>
       </Link>
+      <Link to="/Monitor">
       <OrangeButton variant="contained" endIcon={<SendIcon />}>
         Enviar
       </OrangeButton>
+      </Link>
     </Stack>
   );
 }
