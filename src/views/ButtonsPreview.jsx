@@ -4,6 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 
 const OrangeButton= styled(Button)({
    backgroundColor: '#ed6c04',
@@ -45,9 +46,11 @@ const DeleteButton= styled(Button)({
 function ButtonsPreview() {
   return (
     <Stack direction="row" spacing={2}>
+      <Link to="/UploadDocument">
       <DeleteButton variant="outlined" startIcon={<DeleteIcon />}>
         Eliminar
       </DeleteButton>
+      </Link>
       <OrangeButton variant="contained" endIcon={<SendIcon />}>
         Enviar
       </OrangeButton>

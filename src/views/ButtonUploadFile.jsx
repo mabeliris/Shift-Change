@@ -16,18 +16,32 @@ const VisuallyHiddenInput = styled('input')({
   width: 1,
 });
 
+const Button2 = styled(Button)({
+  backgroundColor: '#ed6c04',
+  '&:hover': {
+    backgroundColor: '#5b5b5b',
+    borderColor: '#0062cc',
+    boxShadow: 'none',
+  },
+  '&:active': {
+    boxShadow: 'none',
+    backgroundColor: '#0062cc',
+    borderColor: '#005cbf',
+  },
+});
+
 function ButtonUploadFile({ handleFileChange }) {
   return (
-    <Button
+    <Button2
       component="label"
       role={undefined}
       variant="contained"
       tabIndex={-1}
       startIcon={<CloudUploadIcon />}
     >
-      Upload file
+      Subir Archivo
       <VisuallyHiddenInput type="file" onChange={handleFileChange}/>
-    </Button>
+    </Button2>
   );
 }
 export default ButtonUploadFile;
